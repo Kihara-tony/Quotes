@@ -6,8 +6,8 @@
 <hr>
 <ul>
   <div *ngFor='let quote of quotes;let i = index'>
-    <li id="{{i}}" appHighlightthrough>{{quote.name}}  due on  {{goal.completeDate|date|uppercase}}</li>
+    <li id="{{i}}" appHighlightthrough>{{quote.name}}  due on  {{quote.completeDate|date|uppercase}}</li>
     <button (click)='quoteDetails(i)'>Quote Details</button>
-    <app-quote-details *ngIf="quote.showDescription" [quote]='quote'(isComplete)='completeGoal($event,i)' ></app-quote-details>
+    <app-quote-details *ngIf="quote.showDescription" [quote]='quote'(isComplete)='completeQuote($event,i)' ></app-quote-details>
   </div>
 </ul>
