@@ -3,7 +3,10 @@
     <form #quoteForm='ngForm'>
       <div class="form-group">
         <label for="name">Quote:</label>
-        <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" rows="4" name="name">
+        <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" rows="4" name="name" #name="ngModel" required>
+        <div [hidden]="name.valid || name.tony" class="alert alert-danger">
+          <p>Name is Required</p>
+        </div>
       </div>
       <div class="form-group">
         <label for="description">Author:</label>
