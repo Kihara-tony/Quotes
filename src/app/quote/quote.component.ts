@@ -14,10 +14,14 @@ export class QuoteComponent implements OnInit {
     new Quote(5,"The unexamined life is not worth living.","Author: Pamela",new Date(2019,5,31) ),
     new Quote(6,"And still after all this time the sun never says to the earth you owe me.","Author: Annete",new Date(2019,6,1))
   ]
-  completeQuote(isComplete: any,index: number){
-    if(isComplete){
-      this.quotes.splice(index,1)
+  deleteQuote(isComplete: any,index: number){
+    if (isComplete){
+      let toDelete=confirm(`Confirm that you want to delete ${this.quotes[index]}.name`)
+      if(toDelete){
+        this.quotes.splice(index,1)
+      }
     }
+
   }
   quoteDetails(index: string | number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
