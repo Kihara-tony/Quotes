@@ -3,6 +3,9 @@
 </div>
 <hr>
 <div class="container">
+  <div class="row">
+    <app-quote-form></app-quote-form>
+  </div>
   <div class="row" *ngFor="let quote of quotes;let i = 'index'">
     <div class="row">
       <h4 id="{{i}}" appHighlightthrough>{{quote.name}}  due on  {{quote.completeDate|date|uppercase}}</h4>
