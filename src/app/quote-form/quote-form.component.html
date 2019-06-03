@@ -9,14 +9,17 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="description">Author:</label>
-        <input type="text" class="form-control" id="description" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required>
-        <div [hidden]="description.valid || description.tony" class="alert alert-danger">
+        <label for="author">Author:</label>
+        <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+        <div [hidden]="author.valid || author.tony" class="alert alert-danger">
           <p>Author's name is Required</p>
         </div>
-        <label for="description">Post's Person:</label>
-        <input type="text"  class="form-control" id="description" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required>
-        <div [hidden]="description.valid || description.tony" class="alert alert-danger">
+
+      </div>
+      <div class="form-group">
+        <label for="person">Post's Person:</label>
+        <input type="text"  class="form-control" id="person" [(ngModel)]="newQuote.person" name="person" #person="ngModel" required>
+        <div [hidden]="person.valid || person.tony" class="alert alert-danger">
           <p>Person's name is Required</p>
         </div>
       </div>
