@@ -4,29 +4,28 @@
       <div class="form-group">
         <label for="name">Quote:</label>
         <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" rows="4" name="name" #name="ngModel" required>
-        <div [hidden]="name.valid || name.tony" class="alert alert-danger">
-          <p>Quote is Required</p>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          <p>Quote is needed ...</p>
         </div>
       </div>
       <div class="form-group">
         <label for="description">Author:</label>
-        <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
-        <div [hidden]="author.valid || author.tony" class="alert alert-danger">
-          <p>Author's name is Required</p>
+        <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="name" #author="ngModel" required>
+        <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+          <p>Author's name is needed</p>
         </div>
-
-      </div>
-      <div class="form-group">
-        <label for="person">Post's Person:</label>
-        <input type="text"  class="form-control" id="person" [(ngModel)]="newQuote.person" name="person" #person="ngModel" required>
-        <div [hidden]="person.valid || person.tony" class="alert alert-danger">
-          <p>Person's name is Required</p>
+       </div>
+       <div class="form-group">
+        <label for="edit">Editted by:</label>
+        <input type="text"  class="form-control" id="edit" [(ngModel)]="newQuote.edit" name="name" #edit="ngModel" required>
+        <div [hidden]="person.valid || person.pristine" class="alert alert-danger">
+          <p>Editor's name is Required</p>
         </div>
       </div>
       <div class="form-group">
         <label for="complete">Date of Post:</label>
         <input type="date" id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
-        <div [hidden]="completeDate.valid || completeDate.tony" class="alert alert-danger">
+        <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
           <p>Posting Date is Required</p>
         </div>
       </div>
