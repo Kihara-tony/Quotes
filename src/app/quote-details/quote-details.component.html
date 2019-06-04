@@ -1,6 +1,6 @@
 <div class="details-1">
   <p>{{quote.description}}</p>
-  <p>This Quote has been in for {{quote.complete|dateCount}} days</p>
+  <p>This Quote has been in for {{quote.timeSpan|dateCount}} days</p>
   <button class="btn btn-danger" (click)='quoteDelete(true)'>Delete Quote</button>
     <div class="four wide column center aligned votes">
       <div class="quote">
