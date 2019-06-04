@@ -25,7 +25,7 @@
       <div class="form-group">
         <label for="complete">Date of Post:</label>
         <input type="date" id="complete" [(ngModel)]="newQuote.timeSpan" name="timeSpan" #timeSpan="ngModel" required>
-        <div [hidden]=".valid || .pristine" class="alert alert-danger">
+        <div [hidden]="timeSpan.valid || timeSpan.pristine" class="alert alert-danger">
           <p>Posting Date is Required</p>
         </div>
       </div>
