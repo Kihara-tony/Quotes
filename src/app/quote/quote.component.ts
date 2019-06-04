@@ -14,7 +14,7 @@ export class QuoteComponent implements OnInit {
     new Quote(5,"The unexamined life is not worth living.","Author: Pamela",new Date(2019,5,31) ),
     new Quote(6,"And still after all this time the sun never says to the earth you owe me.","Author: Annete",new Date(2019,6,1))
   ]
-  deleteQuote(isComplete,index){
+  deleteQuote(isComplete: any,index: number){
     if (isComplete){
       let toDelete=confirm(`Confirm that you want to delete ${this.quotes[index].name}`)
       if(toDelete){
@@ -22,13 +22,13 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  addNewQuote(quote){
+  addNewQuote(quote: Quote){
     let quoteLength = this.quotes.length;
     quote.id=quoteLength+1;
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }
-  quoteDetails(index){
+  quoteDetails(index: string | number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
   constructor() { }

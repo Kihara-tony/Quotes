@@ -8,7 +8,7 @@
   </div>
   <div class="row" *ngFor="let quote of quotes;let i = 'index'">
     <div class="row">
-      <h4 id="{{i}}" appHighlightthrough>{{quote.name}}  due on  {{quote.completeDate|date|uppercase}}<br></h4>
+      <h4 id="{{i}}" appHighlightthrough>{{quote.name}}  due on  {{quote.completeDate|date|uppercase}}</h4><br><br>
       <button class="btn btn-primary" (click)='quoteDetails(i)'>Quote Details</button>
     </div>
     <div class="row" *ngIf="quote.showDescription">

@@ -2,25 +2,17 @@
   <p>{{quote.description}}</p>
   <p>This Quote has been in for {{quote.complete|dateCount}} days</p>
   <button class="btn btn-danger" (click)='quoteDelete(true)'>Delete Quote</button>
-</div>
-
-
     <div class="four wide column center aligned votes">
-      <div class="ui statistic">
-
+      <div class="quote">
         <div class="value">
           {{ votes }}
         </div>
         <div class="label">
           Votes:
         </div>
-
       </div>
-
     </div>
-
-    <div class="twelve wide column">
-
+    <div class="wide column">
       <ul class="ui big horizontal list voters">
         <li class="item">
           <a href (click)="likeVote()">
@@ -28,8 +20,7 @@
             upvote
           </a>
         </li>
-
-        <li class="item">
+        <li class="one">
           <a href (click)="dislikeVote()">
           <i class="arrow down icon"></i>
             downvote
@@ -38,3 +29,4 @@
 
       </ul>
     </div>
+</div>
